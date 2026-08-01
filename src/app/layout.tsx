@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hjinlabs.online"),
   title: "HJIN LABS — Innovative Software R&D Studio",
   description:
     "HJIN Labs is an innovative software research and development studio. We build mobile applications including Steprize, Budget Tracker, and Domino.",
@@ -32,6 +33,23 @@ export const metadata: Metadata = {
     description:
       "We build mobile applications that make a difference. Steprize, Budget Tracker, and Domino.",
     type: "website",
+    url: "https://hjinlabs.online",
+    siteName: "HJIN LABS",
+    images: [
+      {
+        url: "/images/steprize-icon.png",
+        width: 1254,
+        height: 1254,
+        alt: "Steprize app icon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "HJIN LABS — Innovative Software R&D Studio",
+    description:
+      "We build mobile applications that make a difference. Steprize, Budget Tracker, and Domino.",
+    images: ["/images/steprize-icon.png"],
   },
 };
 

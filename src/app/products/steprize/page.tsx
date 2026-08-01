@@ -1,4 +1,18 @@
+import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Steprize — Move to Earn',
+  description:
+    'Turn every step into real rewards. Steprize tracks your physical activity and rewards you with coins you can redeem for gift cards and more. Available on Google Play.',
+  openGraph: {
+    title: 'Steprize — Move to Earn',
+    description:
+      'Turn every step into real rewards. Steprize tracks your physical activity and rewards you with coins you can redeem.',
+    images: ['/images/steprize-icon.png'],
+  },
+};
 
 const features = [
   {
@@ -63,17 +77,25 @@ export default function SteprizePage() {
               </div>
               <div className="fade-in fade-in-2 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <a
-                  href="/downloads/steprize.apk"
+                  href="https://play.google.com/store/apps/details?id=com.hjinlabs.steprize"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary text-white px-8 py-4 rounded-2xl text-base font-bold flex items-center gap-3 w-full sm:w-auto justify-center"
                 >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.6 2.3c-.4.3-.6.8-.6 1.4v16.6c0 .6.2 1.1.6 1.4L12.9 12 3.6 2.3zM17 8.2L6.5 3.4l8.9 8.9L17 8.2zM6.5 20.6l10.5-4.8-2.6-2.7-7.9 7.5zM15.2 13.1l2.7 2.7 1.7-.8c1-.5 1-1.9 0-2.4l-1.7-.8-2.7 2.3z" />
                   </svg>
-                  <span>Download APK</span>
+                  <span>Get it on Google Play</span>
+                </a>
+                <a
+                  href="/downloads/steprize.apk"
+                  className="btn-outline px-8 py-4 rounded-2xl text-base font-bold w-full sm:w-auto text-center"
+                >
+                  Download APK
                 </a>
                 <Link
                   href="/legal/privacy-steprize"
-                  className="btn-outline px-8 py-4 rounded-2xl text-base font-bold w-full sm:w-auto text-center"
+                  className="text-sm font-semibold text-gray-400 hover:text-[#0057FF] transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -85,8 +107,14 @@ export default function SteprizePage() {
                 <div className="absolute inset-0 gradient-blue-light rounded-[32px] -rotate-3" />
                 <div className="absolute inset-0 bg-white rounded-[32px] card-shadow flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl gradient-blue flex items-center justify-center mx-auto mb-4 float-anim">
-                      <span className="text-4xl">👟</span>
+                    <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl bg-white card-shadow flex items-center justify-center mx-auto mb-4 float-anim overflow-hidden p-2">
+                      <Image
+                        src="/images/steprize-icon.png"
+                        alt="Steprize app icon"
+                        width={144}
+                        height={144}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                     <div className="text-2xl font-black tracking-tight">
                       STEP<span className="text-[#0057FF]">RIZE</span>
@@ -151,17 +179,30 @@ export default function SteprizePage() {
             <div className="blob w-48 h-48 bg-white/5 bottom-[-20px] left-[-20px]" />
             <h2 className="text-3xl md:text-4xl font-black text-white mb-4 relative z-10">Get Started Today</h2>
             <p className="text-white/70 max-w-lg mx-auto mb-10 relative z-10">
-              Download the latest APK directly. No app store required. Android 8.0+ required.
+              Download the latest APK directly or install it from Google Play. Android 8.0+ required.
             </p>
-            <a
-              href="/downloads/steprize.apk"
-              className="inline-flex items-center gap-3 bg-white text-[#0057FF] px-10 py-5 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 relative z-10"
-            >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
-              </svg>
-              <span>Download APK</span>
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.hjinlabs.steprize"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-white text-[#0057FF] px-10 py-5 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1"
+              >
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.6 2.3c-.4.3-.6.8-.6 1.4v16.6c0 .6.2 1.1.6 1.4L12.9 12 3.6 2.3zM17 8.2L6.5 3.4l8.9 8.9L17 8.2zM6.5 20.6l10.5-4.8-2.6-2.7-7.9 7.5zM15.2 13.1l2.7 2.7 1.7-.8c1-.5 1-1.9 0-2.4l-1.7-.8-2.7 2.3z" />
+                </svg>
+                <span>Get it on Google Play</span>
+              </a>
+              <a
+                href="/downloads/steprize.apk"
+                className="inline-flex items-center gap-3 bg-[#0B3A9E] text-white px-10 py-5 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1"
+              >
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+                </svg>
+                <span>Download APK</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
