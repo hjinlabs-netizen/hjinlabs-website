@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.hjinlabs.steprize",
+      "sha256_cert_fingerprints": [
+        "73:CD:07:1F:46:A0:CA:89:A6:59:53:02:88:FE:F3:91:87:7A:BA:01:C6:BA:52:F2:F4:C1:48:F5:F9:5B:B5:D3"
+      ]
+    }
+  }
+]
