@@ -87,12 +87,6 @@ export default function SteprizePage() {
                   </svg>
                   <span>Get it on Google Play</span>
                 </a>
-                <a
-                  href="/downloads/steprize.apk"
-                  className="btn-outline px-8 py-4 rounded-2xl text-base font-bold w-full sm:w-auto text-center"
-                >
-                  Download APK
-                </a>
                 <Link
                   href="/legal/privacy-steprize"
                   className="text-sm font-semibold text-gray-400 hover:text-[#0057FF] transition-colors"
@@ -192,15 +186,6 @@ export default function SteprizePage() {
                   <path d="M3.6 2.3c-.4.3-.6.8-.6 1.4v16.6c0 .6.2 1.1.6 1.4L12.9 12 3.6 2.3zM17 8.2L6.5 3.4l8.9 8.9L17 8.2zM6.5 20.6l10.5-4.8-2.6-2.7-7.9 7.5zM15.2 13.1l2.7 2.7 1.7-.8c1-.5 1-1.9 0-2.4l-1.7-.8-2.7 2.3z" />
                 </svg>
                 <span>Get it on Google Play</span>
-              </a>
-              <a
-                href="/downloads/steprize.apk"
-                className="inline-flex items-center gap-3 bg-[#0B3A9E] text-white px-10 py-5 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1"
-              >
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
-                </svg>
-                <span>Download APK</span>
               </a>
             </div>
           </div>
