@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.hjinlabs.steprize",
       "sha256_cert_fingerprints": [
-        "73:CD:07:1F:46:A0:CA:89:A6:59:53:02:88:FE:F3:91:87:7A:BA:01:C6:BA:52:F2:F4:C1:48:F5:F9:5B:B5:D3"
+        "73:CD:07:1F:46:A0:CA:89:A6:59:53:02:88:FE:F3:91:87:7A:BA:01:C6:BA:52:F2:F4:C1:48:F5:F9:5B:B5:D3",
+        "B6:E0:BA:02:7A:50:4F:11:3A:63:18:FA:99:94:EC:96:E2:49:57:91:B9:4E:CF:67:75:9C:C2:41:AC:79:D7:36"
       ]
     }
   }
