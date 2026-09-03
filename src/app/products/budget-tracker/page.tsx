@@ -1,4 +1,41 @@
 import Link from 'next/link';
+import type { Metadata } from "next";
+
+export const dynamic = "force-static";
+
+export function generateMetadata(): Metadata {
+  return {
+    title: "Budget Tracker — Personal Finance Manager for Android | HJIN LABS",
+    description:
+      "Track income, expenses, and savings effortlessly. Budget Tracker for Android — auto-capture from SMS, biometric security, analysis charts, and savings goals.",
+    alternates: {
+      canonical: "https://www.hjinlabs.online/products/budget-tracker/",
+    },
+    openGraph: {
+      title: "Budget Tracker — Personal Finance Manager",
+      description:
+        "Track income, expenses, and savings effortlessly. Features include auto-capture from SMS, fingerprint security, analysis charts, and savings goals.",
+      url: "https://www.hjinlabs.online/products/budget-tracker/",
+      siteName: "HJIN LABS",
+      images: [
+        {
+          url: "/images/budget-icon.png",
+          width: 512,
+          height: 512,
+          alt: "Budget Tracker app icon",
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: "Budget Tracker — Personal Finance Manager",
+      description:
+        "Track income, expenses, and savings effortlessly. Features include auto-capture from SMS, fingerprint security, analysis charts, and savings goals.",
+      images: ["/images/budget-icon.png"],
+    },
+  };
+}
 
 const features = [
   {
@@ -37,7 +74,25 @@ export default function BudgetTrackerPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F7F8FA]">
+      <section className="relative min-h-[calc(100vh-4rem)] flex items-center overflow-hidden bg-[#F7F8FA]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "Budget Tracker",
+              operatingSystem: "Android 8.0+",
+              applicationCategory: "FinanceApplication",
+              description:
+                "Your personal finance manager — track income, expenses, and savings effortlessly.",
+              author: {
+                "@type": "Organization",
+                name: "HJIN LABS",
+              },
+            }),
+          }}
+        />
         <div className="blob w-[400px] h-[400px] bg-[#202124]/5 top-[-100px] left-[-100px]" />
         <div className="blob w-[300px] h-[300px] bg-[#202124]/3 bottom-0 right-0" />
 
@@ -75,7 +130,7 @@ export default function BudgetTrackerPage() {
                 </Link>
               </div>
               <p className="text-gray-400 text-sm mt-4 fade-in fade-in-3">
-                Version 1.0.1 · 3.7 MB · Android 8.0+
+                Version 1.0.1 · 4.4 MB · Android 8.0+
               </p>
             </div>
             <div className="flex-1 flex justify-center fade-in fade-in-3">
@@ -85,7 +140,11 @@ export default function BudgetTrackerPage() {
                 <div className="absolute inset-0 bg-white rounded-[32px] card-shadow flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl bg-[#202124] flex items-center justify-center mx-auto mb-4 float-anim">
-                      <span className="text-5xl">💰</span>
+                      <img
+                        src="/images/budget-icon.png"
+                        alt="Budget Tracker app icon"
+                        className="w-20 h-20 md:w-28 md:h-28 rounded-2xl"
+                      />
                     </div>
                     <div className="text-2xl font-black tracking-tight text-[#202124]">
                       Budget Tracker
@@ -122,6 +181,27 @@ export default function BudgetTrackerPage() {
         </div>
       </section>
 
+      {/* Tech Stack */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-black tracking-tight text-center mb-4 text-[#202124]">
+            Built with
+          </h2>
+          <div className="flex flex-wrap justify-center gap-3 mt-8">
+            {["Kotlin", "Jetpack Compose", "Material 3", "Ktor", "Supabase", "AdMob"].map(
+              (tech) => (
+                <span
+                  key={tech}
+                  className="px-4 py-2 rounded-xl bg-[#F7F8FA] text-[#202124] text-sm font-semibold border border-gray-200"
+                >
+                  {tech}
+                </span>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Download */}
       <section className="py-24 bg-[#F7F8FA]">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -130,7 +210,7 @@ export default function BudgetTrackerPage() {
             <div className="blob w-48 h-48 bg-white/3 bottom-[-20px] left-[-20px]" />
             <h2 className="text-3xl md:text-4xl font-black text-white mb-4 relative z-10">Get Started Today</h2>
             <p className="text-white/60 max-w-lg mx-auto mb-10 relative z-10">
-              Download the latest APK directly. No app store required. Version 1.0.1 — 3.7 MB.
+              Download the latest APK directly. No app store required. Version 1.0.1 — 4.4 MB.
             </p>
             <a
               href="/downloads/BudgetTracker-v1.0.1.apk"

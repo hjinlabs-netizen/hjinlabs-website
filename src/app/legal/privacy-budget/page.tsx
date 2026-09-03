@@ -77,10 +77,8 @@ export default function PrivacyBudgetPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-500 ml-4 list-disc">
           <li><strong className="text-gray-700">Supabase</strong> — Cloud database and authentication. Your synced data is stored on Supabase servers in the us-west-1 region.</li>
+          <li><strong className="text-gray-700">Google AdMob</strong> — Rewarded advertising SDK for optional ad-supported features. AdMob may collect and process device identifiers, advertising identifiers, and ad interaction data in accordance with Google&apos;s Privacy Policy. No personal financial data is shared with AdMob. Ad views are entirely optional and user-initiated.</li>
         </ul>
-        <p className="text-gray-500 leading-relaxed text-sm mt-4">
-          Budget Tracker contains <strong>no advertising SDKs, no analytics SDKs (beyond crash reporting), and no third-party trackers</strong>.
-        </p>
       </div>
 
       <div>
