@@ -120,7 +120,7 @@ export default function DeleteAccountPage() {
             After your deletion request is processed:
           </p>
           <ul className="space-y-2 text-sm text-gray-500 ml-4 list-disc">
-            <li><strong className="text-gray-700">Immediate:</strong> Your account will be deactivated and you will be logged out of all devices.</li>
+            <li><strong className="text-gray-700">30-day grace period:</strong> Your account deletion request will be registered and permanently processed after a 30-day grace period.</li>
             <li><strong className="text-gray-700">Within 30 days:</strong> All your personal data will be permanently deleted from our servers.</li>
             <li><strong className="text-gray-700">Anonymized Analytics:</strong> Aggregated, anonymized usage statistics may be retained for service improvement. These cannot be linked back to your account.</li>
             <li><strong className="text-gray-700">Legal Compliance:</strong> We may retain certain records as required by applicable law or for legitimate legal purposes.</li>
@@ -156,8 +156,8 @@ export default function DeleteAccountPage() {
                 <div>
                   <h3 className="text-green-800 font-bold mb-1">Deletion Request Submitted</h3>
                   <p className="text-green-700 text-sm">
-                    Your request has been received. We will process your account deletion within 30 days.
-                    You will receive a confirmation email at the address you provided.
+                    Deletion request submitted. Your account and associated data will be permanently deleted after 30 days.
+                    Once submitted, your request is queued for processing. You may contact support if you wish to cancel within 30 days.
                   </p>
                 </div>
               </div>
