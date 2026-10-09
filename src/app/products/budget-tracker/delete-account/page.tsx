@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const SUPABASE_URL = 'https://lldvuzjwfomyrrcejpze.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxsZHZ1emp3Zm9teXJyY2VqcHplIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxMTM4NDYsImV4cCI6MjA5NDY4OTg0Nn0.KYIHMQ4VtnOjgzjYK384Ekm2x1QiCtqB1QtII5GKJjI';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
 
 type FormState = 'idle' | 'loading' | 'success' | 'error';
 
@@ -43,7 +43,7 @@ export default function DeleteAccountPage() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'apikey': SUPABASE_ANON_KEY,
+          'apikey': supabaseAnonKey,
         },
         body: JSON.stringify({ email: email.trim().toLowerCase() }),
       });
