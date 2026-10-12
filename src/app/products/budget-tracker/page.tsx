@@ -5,14 +5,14 @@ export const dynamic = "force-static";
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Budget Tracker — Personal Finance Manager for Android | HJIN LABS",
+    title: "EraFinance: Budget & Expense — Personal Finance Manager for Android | HJIN LABS",
     description:
-      "Track income, expenses, and savings effortlessly. Budget Tracker for Android — auto-capture from SMS, biometric security, analysis charts, and savings goals.",
+      "Track income, expenses, and savings effortlessly. EraFinance: Budget & Expense for Android — auto-capture from SMS, biometric security, analysis charts, and savings goals.",
     alternates: {
       canonical: "https://www.hjinlabs.online/products/budget-tracker/",
     },
     openGraph: {
-      title: "Budget Tracker — Personal Finance Manager",
+      title: "EraFinance: Budget & Expense — Personal Finance Manager",
       description:
         "Track income, expenses, and savings effortlessly. Features include auto-capture from SMS, fingerprint security, analysis charts, and savings goals.",
       url: "https://www.hjinlabs.online/products/budget-tracker/",
@@ -29,7 +29,7 @@ export function generateMetadata(): Metadata {
     },
     twitter: {
       card: "summary",
-      title: "Budget Tracker — Personal Finance Manager",
+      title: "EraFinance: Budget & Expense — Personal Finance Manager",
       description:
         "Track income, expenses, and savings effortlessly. Features include auto-capture from SMS, fingerprint security, analysis charts, and savings goals.",
       images: ["/images/budget-icon.png"],
@@ -81,7 +81,7 @@ export default function BudgetTrackerPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "Budget Tracker",
+              name: "EraFinance: Budget & Expense",
               operatingSystem: "Android 8.0+",
               applicationCategory: "FinanceApplication",
               description:
@@ -101,12 +101,12 @@ export default function BudgetTrackerPage() {
             <div className="flex-1 text-center lg:text-left">
               <div className="fade-in fade-in-1">
                 <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold bg-[#202124] text-white mb-6">
-                  v1.0.1 — Now Available
+                  Available on Google Play
                 </span>
                 <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight mb-6">
-                  <span className="text-[#202124]">BUDGET</span>
+                  <span className="text-[#202124]">ERAFINANCE</span>
                   <br />
-                  <span className="text-[#202124]/70">TRACKER.</span>
+                  <span className="text-[#202124]/70">BUDGET &amp; EXPENSE.</span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-500 max-w-xl leading-relaxed mb-10">
                   Your personal finance manager — track income, expenses, and savings effortlessly.
@@ -114,13 +114,15 @@ export default function BudgetTrackerPage() {
               </div>
               <div className="fade-in fade-in-2 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <a
-                  href="/downloads/BudgetTracker-v1.0.1.apk"
+                  href="https://play.google.com/store/apps/details?id=com.hjinlabs.budgettracker"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-[#202124] text-white px-8 py-4 rounded-2xl text-base font-bold flex items-center gap-3 w-full sm:w-auto justify-center hover:bg-[#202124]/90 transition-all hover:-translate-y-0.5 shadow-lg"
                 >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.6 1.8L13.7 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1zm11.5 8.7L4.9 1.7l12.3 7c.8.5.8 1.6 0 2.1l-2.1-1.3zm0 3L4.9 22.3l12.3-7c.8-.5.8-1.6 0-2.1l-2.1 1.3z" />
                   </svg>
-                  <span>Download Free</span>
+                  <span>Get it on Google Play</span>
                 </a>
                 <Link
                   href="/legal/privacy-budget"
@@ -128,9 +130,15 @@ export default function BudgetTrackerPage() {
                 >
                   Privacy Policy
                 </Link>
+                <Link
+                  href="/legal/terms-budget"
+                  className="border-2 border-[#202124]/30 text-[#202124]/70 px-8 py-4 rounded-2xl text-base font-bold w-full sm:w-auto text-center hover:bg-[#202124] hover:text-white transition-all"
+                >
+                  Terms of Service
+                </Link>
               </div>
               <p className="text-gray-400 text-sm mt-4 fade-in fade-in-3">
-                Version 1.0.1 · 4.4 MB · Android 8.0+
+                Free · Android 8.0+ · Secure updates via Google Play
               </p>
             </div>
             <div className="flex-1 flex justify-center fade-in fade-in-3">
@@ -147,9 +155,9 @@ export default function BudgetTrackerPage() {
                       />
                     </div>
                     <div className="text-2xl font-black tracking-tight text-[#202124]">
-                      Budget Tracker
+                      EraFinance
                     </div>
-                    <div className="text-gray-400 text-sm mt-1">Personal Finance</div>
+                    <div className="text-gray-400 text-sm mt-1">Budget &amp; Expense</div>
                   </div>
                 </div>
               </div>
@@ -210,18 +218,20 @@ export default function BudgetTrackerPage() {
             <div className="blob w-48 h-48 bg-white/3 bottom-[-20px] left-[-20px]" />
             <h2 className="text-3xl md:text-4xl font-black text-white mb-4 relative z-10">Get Started Today</h2>
             <p className="text-white/60 max-w-lg mx-auto mb-10 relative z-10">
-              Download the latest APK directly. No app store required. Version 1.0.1 — 4.4 MB.
+              Get EraFinance free on Google Play. Secure automatic updates — no sideloading required.
             </p>
             <a
-              href="/downloads/BudgetTracker-v1.0.1.apk"
+              href="https://play.google.com/store/apps/details?id=com.hjinlabs.budgettracker"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-white text-[#202124] px-10 py-5 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 relative z-10"
             >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.6 1.8L13.7 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1zm11.5 8.7L4.9 1.7l12.3 7c.8.5.8 1.6 0 2.1l-2.1-1.3zm0 3L4.9 22.3l12.3-7c.8-.5.8-1.6 0-2.1l-2.1 1.3z" />
               </svg>
-              <span>Download Free</span>
+              <span>Get it on Google Play</span>
             </a>
-            <p className="text-white/40 text-sm mt-6 relative z-10">Android 8.0+ required. 64-bit devices only.</p>
+            <p className="text-white/40 text-sm mt-6 relative z-10">Requires Android 8.0 or higher.</p>
           </div>
         </div>
       </section>

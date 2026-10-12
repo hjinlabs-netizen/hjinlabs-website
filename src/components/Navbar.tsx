@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -10,7 +11,7 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 glass-nav">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="text-xl font-extrabold tracking-tight flex items-center gap-3">
-          <span className="w-8 h-8 rounded-lg bg-[#1E3A5F] text-white flex items-center justify-center text-xs font-black">H</span>
+          <Image src="/logo.jpeg" alt="HJIN Labs" width={32} height={32} className="w-8 h-8 rounded-lg object-cover" />
           <span>HJIN <span className="text-[#3B82F6]">LABS</span></span>
         </Link>
 

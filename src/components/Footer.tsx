@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-10">
           <div className="md:col-span-2">
             <div className="text-lg font-extrabold tracking-tight flex items-center gap-2 mb-4">
-              <span className="w-7 h-7 rounded-lg bg-white text-[#1E3A5F] flex items-center justify-center text-xs font-black">H</span>
+              <Image src="/logo.jpeg" alt="HJIN Labs" width={28} height={28} className="w-7 h-7 rounded-lg object-cover" />
               <span>HJIN <span className="text-[#3B82F6]">LABS</span></span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-sm">
@@ -19,7 +20,7 @@ export default function Footer() {
             <h4 className="font-bold text-sm mb-4 text-white/80">Products</h4>
             <div className="space-y-3 text-sm text-white/50">
               <Link href="/products/steprize" className="block hover:text-white transition-colors">Steprize</Link>
-              <Link href="/products/budget-tracker" className="block hover:text-white transition-colors">Budget Tracker</Link>
+              <Link href="/products/budget-tracker" className="block hover:text-white transition-colors">EraFinance: Budget &amp; Expense</Link>
               <Link href="/products/domino" className="block hover:text-white transition-colors">Domino</Link>
             </div>
           </div>
@@ -31,6 +32,7 @@ export default function Footer() {
               <Link href="/legal/terms" className="block hover:text-white transition-colors">Terms of Service</Link>
               <Link href="/legal/privacy-steprize" className="block hover:text-white transition-colors">Steprize Privacy</Link>
               <Link href="/legal/privacy-budget" className="block hover:text-white transition-colors">Budget Privacy</Link>
+              <Link href="/legal/terms-budget" className="block hover:text-white transition-colors">Budget Terms</Link>
               <Link href="/legal/privacy-domino" className="block hover:text-white transition-colors">Domino Privacy</Link>
             </div>
           </div>

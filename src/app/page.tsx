@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const products = [
   {
@@ -15,7 +16,7 @@ const products = [
   },
   {
     id: 'budget',
-    name: 'Budget Tracker',
+    name: 'EraFinance: Budget & Expense',
     tagline: 'Personal Finance Manager',
     description: 'Track income, expenses, and savings effortlessly. Auto-capture transactions from bank SMS, visual reports, and cloud sync.',
     color: 'text-[#202124]',
@@ -89,8 +90,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[#3B82F6]/10 rounded-[32px] -rotate-3" />
                 <div className="absolute inset-0 bg-white rounded-[32px] card-shadow flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl bg-gradient-to-br from-[#1E3A5F] to-[#3B82F6] flex items-center justify-center mx-auto mb-4 float-anim">
-                      <span className="text-5xl font-black text-white">H</span>
+                    <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden mx-auto mb-4 float-anim">
+                      <Image src="/logo.jpeg" alt="HJIN Labs" width={144} height={144} className="w-28 h-28 md:w-36 md:h-36 rounded-2xl object-cover" />
                     </div>
                     <div className="text-2xl font-black tracking-tight text-[#1E3A5F]">
                       HJIN <span className="text-[#3B82F6]">LABS</span>
